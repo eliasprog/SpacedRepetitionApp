@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Card {
+class Card: Codable{
     
     // Properties
     //var id: Int

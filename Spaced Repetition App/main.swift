@@ -33,7 +33,7 @@ while(ctrl) { // loop infinito, encerra quanto ctrl for '0'
             switch optInt {
             case 1:
                 let card = Card(content: "portugues", nextStudyDay: 0)
-                obj.addCard(card: card)
+                obj.saveCards(card: card)
             case 2:
                 print("Estudando\n")
             case 3:
