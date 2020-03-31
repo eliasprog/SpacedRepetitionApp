@@ -32,15 +32,42 @@ while(ctrl) { // loop infinito, encerra quanto ctrl for '0'
             
             switch optInt {
             case 1:
+
                 let card = Card(content: "portugues", nextStudyDay: 0)
-                obj.saveCards(card: card)
+                obj.addCard(card: card)
+
             case 2:
+
+                let cards = obj.listarCards()
+
+                for card in cards {
+
+                    if card.nextStudyDay == 0 {
+                        print(card.content)
+
+                        print("Classificar: ")
+                        print("0 - Errei | 1 - Acertei | 2 - Fácil ")
+                        
+                        if let val = readLine() {
+                            if let valInt = Int(val) {
+                                card.nextStudyDay = Alg.classificate(nextStudyDay: card.nextStudyDay, val: valInt)
+                            }
+                        }
+                    }
+
+                }
+
+                obj.saveCards(cards: cards)
+
                 print("Estudando\n")
             case 3:
-                let cards: [Card] = obj.listarCards()
-                for card in cards{
-                    print(card.content)
+            
+                let cards = obj.listarCards()
+
+                for card in cards {
+                    print(card.content, card.nextStudyDay)
                 }
+
             case 0:
                 print("Saindo\n")
                 ctrl = false
