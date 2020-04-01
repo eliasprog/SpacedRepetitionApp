@@ -1,13 +1,14 @@
 import Foundation
 
 class Scripts {
-
+    // variaveis
     static let cardDAO = CardDAO()
     static let dateFormatter = DateFormatter()
-    
 
+    /**
+     * Script que retorna o numero de cards a serem estudados no dia.
+     */
     static func getStudyCards() -> Int {
-
         var i = 0
         let cards = cardDAO.listarCards()
 
@@ -20,6 +21,10 @@ class Scripts {
         return i
     }
 
+     /**
+     * Script para atualizar os cards não estudados anteriormento
+     * para serem estudados no dia atual. 
+     */
     static func updateCardsToStudy() {
         let now = Date()
         let cards = cardDAO.listarCards()
@@ -41,6 +46,9 @@ class Scripts {
         cardDAO.saveCards(cards: cards)
     }
 
+    /**
+     * Script para verificar se uma data é o dia atual.
+     */
     static func isToday(dateString: String) -> Bool {
         
         let now = Date() //agora
@@ -60,13 +68,16 @@ class Scripts {
 
     }
 
+    /**
+     * Script para incrementar uma data.
+     */
     static func incrementDate(data: String, val: Int ) -> String {
 
         dateFormatter.dateFormat = "dd-MM-yyyy"
 
         var dataToChange = dateFormatter.date(from: data)
         
-        dataToChange!.addTimeInterval(TimeInterval(val))
+        dataToChange!.addTimeInterval(TimeInterval(val * 86400))
 
         let dataToReturn = dateFormatter.string(from: dataToChange!)
 
