@@ -2,17 +2,21 @@ import Foundation
 
 struct Alg {
 
-    static func classificate(nextStudyDay: Int, val: Int) -> Int {
+    static func classificate(val: Int) -> Int {
+
+        let secondsInDay = 86400
 
         switch (val) {
-            case 0:
-                return nextStudyDay
+
             case 1:
-                return nextStudyDay + 1
+                return secondsInDay
+
             case 2:
-                return (nextStudyDay + 1) * 2
+                return (secondsInDay * 2)
+
             default:
                 return 0
+                
         }
 
     }

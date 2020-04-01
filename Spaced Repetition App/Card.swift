@@ -8,15 +8,15 @@
 
 import Foundation
 
-class Card: Codable{
+class Card: Codable {
     
     // Properties
     //var id: Int
     var content: String
-    var nextStudyDay: Int
+    var nextStudyDay: String
     
      //Init Method
-    init(content: String, nextStudyDay: Int) {
+    init(content: String, nextStudyDay: String) {
         self.content = content
         self.nextStudyDay = nextStudyDay
     }

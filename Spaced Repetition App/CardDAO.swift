@@ -41,5 +41,17 @@ class CardDAO{
         //self.cards = cards
         return cards
     }
+
+    func criarCard(word: String) {
+
+        let now = Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd-MM-yyyy"
+
+        let nowString = dateFormatter.string(from: now)
+    
+        let card = Card(content: word, nextStudyDay: nowString) //Default
+        self.addCard(card: card)
+    }
     
 }
