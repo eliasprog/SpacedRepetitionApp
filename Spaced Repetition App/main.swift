@@ -32,15 +32,18 @@ func showMenu() {
 
 // Função para adicao de cards.
 func adicionar() {
+    system("clear")
     print("Digite a palavra: ")
 
     if let word = readLine() { // Lê o dado do usuario.
         cardDAO.criarCard(word: word) // Solicita o salvamento.
     }
+    system("clear")
 }
 
 // Função para listar cards na tela.
 func listar() {
+    system("clear")
     // Solicita a lista de cards
     let cards = cardDAO.listarCards()
 
@@ -51,10 +54,12 @@ func listar() {
 
 // Funcao para estudar os cards.
 func estudar() {
+    system("clear")
     // lista de cards.
     let cards = cardDAO.listarCards()
 
     for card in cards { // percorre todos os cards.
+        system("clear")
         // Verifica se o card é para ser estudado na data atual.
         if Scripts.isToday(dateString: card.nextStudyDay) {
 
@@ -66,7 +71,7 @@ func estudar() {
             * de acordo com a dificuldade.
             */
             print("Classificar: ")
-            print("0 - Não Aprendi | 1 - Aprendi | 2 - Revisar ")
+            print("0 - Não Aprendi | 1 - Revisar | 2 - Aprendi ")
             
             if let val = readLine() { // Lê a opção do usuário.
                 if let valInt = Int(val) { // Converte para inteiro.
@@ -88,8 +93,10 @@ func estudar() {
     }
     // Solicita o salvamento da lista de cards no arquivo.
     cardDAO.saveCards(cards: cards)
+    system("clear")
 }
 
+system("clear")
 // Menu de opções.
 while(ctrl) {// loop infinito, encerra quanto ctrl for '0'
     
@@ -110,15 +117,18 @@ while(ctrl) {// loop infinito, encerra quanto ctrl for '0'
                 listar()
 
             case 0:
-                print("Saindo\n")
+                system("clear")
+                print("Bye, bye!!!\n")
                 ctrl = false
 
             default:
+                system("clear")
                 print("Opção inválida!\n")
 
             }
             
         } else {
+            system("clear")
             print("Opção inválida! Digite um número inteiro!\n")
         }
     }
