@@ -15,7 +15,7 @@ class Card: Codable {
     var nextStudyDay: String
     var lastDaysIncremented: Int
     
-     //Init Method
+     //Initializer
     init(content: String, nextStudyDay: String) {
         self.content = content
         self.nextStudyDay = nextStudyDay

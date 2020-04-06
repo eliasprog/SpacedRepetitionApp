@@ -20,6 +20,15 @@ class Scripts {
         
         return i
     }
+    
+    static func stringToday() -> String {
+        let now = Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd-MM-yyyy"
+        let nowString = dateFormatter.string(from: now)
+        
+        return nowString
+    }
 
      /**
      * Script para atualizar os cards não estudados anteriormento

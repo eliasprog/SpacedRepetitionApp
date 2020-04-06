@@ -10,6 +10,10 @@
 		0B9FA428241BA6EB0052CD20 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9FA427241BA6EB0052CD20 /* main.swift */; };
 		0B9FA42F241BB3330052CD20 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9FA42E241BB3330052CD20 /* Card.swift */; };
 		0B9FA436241BD3CA0052CD20 /* CardDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9FA435241BD3CA0052CD20 /* CardDAO.swift */; };
+		DE3043F8243782FC00C5CED4 /* scripts.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3043F6243782FC00C5CED4 /* scripts.swift */; };
+		DE3043F9243782FC00C5CED4 /* Alg.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3043F7243782FC00C5CED4 /* Alg.swift */; };
+		DE7CE2872439289500D04E8A /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7CE2862439289500D04E8A /* MainView.swift */; };
+		DE7CE28B2439290600D04E8A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7CE28A2439290600D04E8A /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -29,6 +33,10 @@
 		0B9FA427241BA6EB0052CD20 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		0B9FA42E241BB3330052CD20 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		0B9FA435241BD3CA0052CD20 /* CardDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDAO.swift; sourceTree = "<group>"; };
+		DE3043F6243782FC00C5CED4 /* scripts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = scripts.swift; sourceTree = "<group>"; };
+		DE3043F7243782FC00C5CED4 /* Alg.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alg.swift; sourceTree = "<group>"; };
+		DE7CE2862439289500D04E8A /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		DE7CE28A2439290600D04E8A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,11 +69,39 @@
 		0B9FA426241BA6EB0052CD20 /* Spaced Repetition App */ = {
 			isa = PBXGroup;
 			children = (
+				DE558401243A8214004B5AFE /* Model */,
+				DE558403243A8237004B5AFE /* Controller */,
+				DE558402243A822D004B5AFE /* View */,
 				0B9FA427241BA6EB0052CD20 /* main.swift */,
-				0B9FA42E241BB3330052CD20 /* Card.swift */,
-				0B9FA435241BD3CA0052CD20 /* CardDAO.swift */,
 			);
 			path = "Spaced Repetition App";
+			sourceTree = "<group>";
+		};
+		DE558401243A8214004B5AFE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DE3043F6243782FC00C5CED4 /* scripts.swift */,
+				DE3043F7243782FC00C5CED4 /* Alg.swift */,
+				0B9FA435241BD3CA0052CD20 /* CardDAO.swift */,
+				0B9FA42E241BB3330052CD20 /* Card.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DE558402243A822D004B5AFE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DE7CE2862439289500D04E8A /* MainView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DE558403243A8237004B5AFE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DE7CE28A2439290600D04E8A /* MainViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,8 +162,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE7CE28B2439290600D04E8A /* MainViewController.swift in Sources */,
+				DE3043F8243782FC00C5CED4 /* scripts.swift in Sources */,
+				DE7CE2872439289500D04E8A /* MainView.swift in Sources */,
 				0B9FA428241BA6EB0052CD20 /* main.swift in Sources */,
 				0B9FA42F241BB3330052CD20 /* Card.swift in Sources */,
+				DE3043F9243782FC00C5CED4 /* Alg.swift in Sources */,
 				0B9FA436241BD3CA0052CD20 /* CardDAO.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

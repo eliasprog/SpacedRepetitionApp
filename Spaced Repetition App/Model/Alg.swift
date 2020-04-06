@@ -14,9 +14,7 @@ class Alg {
         var values = [0, 0]
 
         switch (val) {
-
             case 1:
-
                 values[0] = 1
                 if (lastDayIncremented > 1) {
                     if (lastDayIncremented % 2) == 0 {
@@ -43,7 +41,5 @@ class Alg {
                 return values
                 
         }
-
     }
-
 }
