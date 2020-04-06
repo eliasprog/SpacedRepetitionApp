@@ -8,8 +8,8 @@
 
 import Foundation
 
+
 class MainView {
-    
     // Variaveis
     let controller: MainViewController
     
@@ -96,7 +96,7 @@ class MainView {
     }
     
     // Inicia a view na tela.
-    func start() {
+        func start() {
         clear()
         // Menu de opções.
         ctrl: while(true) {// loop infinito, encerra quanto ctrl for '0'
@@ -129,5 +129,6 @@ class MainView {
                 print("Opção inválida! Digite um número inteiro!\n")
             }
         }
+    
     }
 }

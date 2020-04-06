@@ -7,6 +7,7 @@
 //
 
 import Foundation
+@available(OSX 10.12, *)
 
 struct Main {
     // controller
@@ -15,4 +16,8 @@ struct Main {
     static let mainView = MainView(controller: mainViewController)
 }
 // start everything
-Main.mainView.start()
+if #available(OSX 10.12, *){
+    Main.mainView.start()
+}else{
+    print("Sorry, esta versão não é compatível!")
+}
