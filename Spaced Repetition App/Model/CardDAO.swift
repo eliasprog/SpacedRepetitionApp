@@ -18,7 +18,7 @@ class CardDAO {
         // Directory home
         home = FileManager.default.homeDirectoryForCurrentUser
         // Url to the file.
-        fileUrl = home.appendingPathComponent("Documents/dados.json")
+        fileUrl = home.appendingPathComponent("Documents/.dados.json")
         // It creates the file if the same doesn`t exists.
         if (!FileManager.default.fileExists(atPath: fileUrl.path)) {
             do {
