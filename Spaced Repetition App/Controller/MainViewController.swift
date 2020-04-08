@@ -10,14 +10,18 @@ import Foundation
 
 class MainViewController {
     
-    let cardDAO = CardDAO()
+    let cardDAO: CardDAO
+    
+    init() {
+        self.cardDAO = CardDAO()
+        Scripts.updateCardsToStudy()
+    }
     
     func adicionar(word: String) {
         let card = Card(
             content: word,
             nextStudyDay: Scripts.stringToday()
         )
-        
         self.cardDAO.saveCard(card: card)
     }
     

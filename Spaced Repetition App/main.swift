@@ -16,8 +16,8 @@ struct Main {
     static let mainView = MainView(controller: mainViewController)
 }
 // start everything
-if #available(OSX 10.12, *){
+if #available(OSX 10.12, *) {
     Main.mainView.start()
-}else{
+} else {
     print("Sorry, esta versão não é compatível!")
 }
